@@ -8,6 +8,25 @@ export const Container = styled.header`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    .teste {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+    .image1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .image2 {
+        position: absolute;
+        bottom: calc(100vh - 33.25rem);
+        right: 0;
+    }
 `
 
 export const Title = styled.div`

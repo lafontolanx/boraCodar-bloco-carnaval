@@ -18,16 +18,17 @@ export const Header = () => {
 
                 <SearchSelect className="search">
                     <ReactSVG className="icon" src="../../../public/location.svg" />
-                    <select id="select">
-                        <option value="">Selecione uma cidade</option>
-                        <option value="São paulo">São Paulo</option>
-                        <option value="Rio de Janeiro">Rio de Janeiro</option>
-                        <option value="Curitiba">Curitiba</option>
-                        <option value="Florianópolis">Florianópolis</option>
-                        <option value="Porto alegre">Porto Alegre</option>
-                        <option value="Salvador">Salvador</option>
-                    </select>
-                    <ReactSVG className="icon" src="../../../public/chevron-down.svg" />
+                    <div className="select">
+                        <select>
+                            <option value="">Selecione uma cidade</option>
+                            <option value="São paulo">São Paulo</option>
+                            <option value="Rio de Janeiro">Rio de Janeiro</option>
+                            <option value="Curitiba">Curitiba</option>
+                            <option value="Florianópolis">Florianópolis</option>
+                            <option value="Porto alegre">Porto Alegre</option>
+                            <option value="Salvador">Salvador</option>
+                        </select>                        
+                    </div>
                 </SearchSelect>
                 
                 <SearchButton type="submit">BUSCAR AGORA</SearchButton>

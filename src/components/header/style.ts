@@ -35,10 +35,18 @@ export const Content = styled.div`
         background-color: var(--gray-100);
         border-radius: 5px;
 
+        &:focus-within {
+            border-bottom: 2px solid var(--gray-300);
+        }
+
         input, select {
             border: none;
             background-color: transparent;
             width: 100%;
+            
+            &:focus {
+                outline: none;
+            }
         }
 
         .icon {
@@ -62,10 +70,17 @@ export const SearchInput = styled.div`
 
 export const SearchSelect = styled.div`
     padding: 12px 12px 12px 14px;
-    color: var(--gray-500);
 
     select {
         -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        color: var(--gray-500);
+    }
+
+    .select {
+        width: 100%;
+        background: var(--gray-100) url('../../../public/chevron-down.svg') 100% 50% no-repeat;
     }
 `
 
@@ -83,4 +98,17 @@ export const SearchButton = styled.button`
     font-weight: 700;
     font-size: 14px;
     line-height: 24px;
+
+    cursor: pointer;
+
+    transition: filter 0.2s;
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+
+    &:focus {
+        outline: none;
+        filter: brightness(1.1);
+    }
 `

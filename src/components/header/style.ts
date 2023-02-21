@@ -12,6 +12,25 @@ export const Container = styled.header`
 
 export const Title = styled.div`
     text-align: center;
+    width: 647px;
+
+    h3 {
+        font-size: 16px;
+        color: var(--red);
+        font-weight: 500;
+        padding-bottom: 18px;
+    }
+
+    h1 {
+        font-size: 48px;
+        color: var(--gray-900);
+        font-weight: 700;
+        padding-bottom: 40px;
+    }
+
+    strong {
+        color: var(--purple);
+    }
 `
 
 export const Content = styled.div`

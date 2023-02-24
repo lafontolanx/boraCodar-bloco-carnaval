@@ -37,3 +37,10 @@ export const Button = styled.button`
         background-color: var(--purple);
     }
 `
+
+export const CardContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+`

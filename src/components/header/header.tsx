@@ -1,9 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import { ReactSVG } from "react-svg";
 
 import { Container, Content, Title, SearchInput, SearchSelect, SearchButton } from "./style";
 
 export const Header = () => {
+    const [search, setSearch] = useState("");
+
+    function handleSearch(e: any) {
+        setSearch(e.target.value);
+        console.log(search);
+    }
+
+    function handleSubmit(e: any) {
+        e.preventDefault();
+        setSearch("");
+    }
+
     return (
         <Container>
             <ReactSVG className="image1" src="../../../public/ilustra-01.svg" />
@@ -16,7 +28,12 @@ export const Header = () => {
                 <Content>
                     <SearchInput className="search">
                             <ReactSVG className="icon" src="../../../public/search.svg" />
-                            <input type="text" placeholder="Digite o nome do bloco" />                    
+                            <input 
+                                type="text" 
+                                placeholder="Digite o nome do bloco"
+                                value={search} 
+                                onChange={handleSearch}
+                            />                    
                     </SearchInput>
 
                     <SearchSelect className="search">
@@ -34,7 +51,13 @@ export const Header = () => {
                         </div>
                     </SearchSelect>
                     
-                    <SearchButton type="submit">BUSCAR AGORA</SearchButton>
+                    <SearchButton 
+                        type="submit"
+                        onClick={handleSubmit}
+                    >
+                        BUSCAR AGORA
+                    
+                    </SearchButton>
                 </Content>            
             </div>    
         </Container>
